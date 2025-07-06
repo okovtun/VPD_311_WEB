@@ -1,16 +1,44 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 body
 {
 	font-family: Roboto Condensed;
-	font-size:24px;
+	font-size: 24px;
 }
+
 p
 {
-	text-align:justify;
+	text-align: justify;
 }
+
 figure
 {
-	text-align:center;
-	font-style:italic;
-	font-size:16px;
+	text-align: center;
+	font-style: italic;
+	font-size: 16px;
 }
+
+ul /*Непосредственная вложенность*/
+{
+	list-style-type: none;
+}
+
+a
+{
+	color: gray;
+}
+	/*
+	element:pseudo-class{}		https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+	element::pseudo-element{}	https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+	*/
+	a:visited
+	{
+		color: darkblue;
+	}
+
+	a:hover
+	{
+		font-weight: 800;
+		/*font-size:32px;*/
+		background-color:orange;
+	}

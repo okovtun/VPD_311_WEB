@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style>
+		ul
+		{
+			list-style:none;
+		}
+		ul > li::before
+		{
+			content:"";
+			background-image:url('ico/cpu1.ico');
+			background-size:contain/*16px 16px*/;
+			display:inline-block;
+			width:16px;
+			height:16px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Списки</h1>
+	<h2>Нумерованный список</h2>
+	<ol style="list-style-type:upper-roman">
+		<li>Вхожение 1</li>
+		<li>Вхожение 2</li>
+		<li>Вхожение 3</li>
+		<li>Вхожение 4</li>
+		<li>Вхожение 5</li>
+	</ol>
+
+	<h2>Маркированный список</h2>
+	<!--<ul style="list-style-type:circle;">-->
+	<ul>
+		<li>Вхождение 1;</li>
+		<li>Вхождение 2;</li>
+		<li>Вхождение 3;</li>
+		<li>Вхождение 4;</li>
+		<li>Вхождение 5;</li>
+	</ul>
+</body>
+</html>
