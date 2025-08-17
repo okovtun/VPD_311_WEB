@@ -1,10 +1,15 @@
 ﻿https://github.com/okovtun/VPD_311_WEB.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPJ5ms9kxlHNmKHo7H4eqvi
+https://okovtun.github.io/VPD_311_WEB/
 
 Install:
 https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 
 TODO:
+1. По возможности добить курсач;
+2. При желании прикрутить функционал к калькулятору;
+
+DONE:
 1. Добавить в Table of Contents таблицу Менделеева;
 2. Создать ветку 'CalcHW', и в ней добить калькулятор;
 3. Добавить в корень репозитория файл ReadMe, и в этот файл
