@@ -12,11 +12,6 @@ body
     justify-content: space-between;
 }
 
-input/*[type=number]*/,option
-{
-    font-size:24px;
-}
-
 #switch-background
 {
     width: 32px;
@@ -66,6 +61,11 @@ form
     margin:5px;
     padding:5px;
 }
+
+input /*[type=number]*/, select
+{
+    font-size: 24px;
+}
 #power-form input
 {
     width:24%;
@@ -78,4 +78,20 @@ input[type=checkbox], input[type=radio]
 fieldset
 {
     width:46%;
+}
+#registration
+{
+    display:flex;
+}
+#upload-photo
+{
+    border:solid 1px;
+    width:59vh;
+    height:80vh;
+}
+#upload-photo img
+{
+    border: solid 1px;
+    width:  38vh;
+    height: 58vh;
 }

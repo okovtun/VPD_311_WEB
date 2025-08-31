@@ -30,3 +30,13 @@ function SwitchBackground()
     document.getElementById('switch-background').style.transition = `background-image ${delay}s`;
     document.body.className = document.body.className === "light" ? "dark" : "light";
 }
+function UploadPhoto()
+{
+    let image = document.getElementById('photo');
+    let students_photo = document.getElementById('students-photo');
+    let filename = students_photo.value.split('\\');
+    filename = filename[filename.length-1];
+    image.src = filename;
+    alert(filename);
+    //alert(students_photo.value);
+}
