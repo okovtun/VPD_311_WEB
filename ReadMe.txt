@@ -6,6 +6,12 @@ Install:
 https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 
 TODO:
+1. При нажатии на картинку должен меняться фон и цвет шрифта страницы;
+2. Обеспечить плавное переключение между дневной и ночной темой;
+3. Пользователь должен иметь возможность выбрать задержку,
+   с которой будет происходить переключение;
+
+DONE:
 1. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/Geometria1.txt
 2. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg
 3. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/HardChess.jpg

@@ -4,10 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title>WebForms</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<div id="header">
 		Header
+		<span id="mouse"></span>
+		<div id="switch-background" onclick="SwitchBackground()" style="background-image:url('img/moon.png');"></div>
+		<!--<img src="img/moon.png">-->
 	</div>
     <h1>WebForms</h1>
 	<form action="handler.php" method="post">
@@ -21,13 +25,8 @@
 
 		<div id="power"></div>
 	</form>
-	<script>
-		function Power()
-		{
-			let base = document.getElementById("base").value;
-			let exponent = document.getElementById("exponent").value;
-			document.getElementById("power").innerHTML = base ** exponent;
-		}
+	<script src="functions.js">
+		
 	</script>
 </body>
 </html>
