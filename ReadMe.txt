@@ -6,6 +6,9 @@ Install:
 https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 
 TODO:
+Добить Countdown timer;
+
+DONE:
 1. Фотки должны подгружаться из любой папки на компьютере;
 2. Какждая форма должна сворачиваться и разволрачиваться по желанию пользователя;
 

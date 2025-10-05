@@ -95,10 +95,46 @@ fieldset
     width:  38vh;
     height: 58vh;
 }
-/*                          Time                                */
+/*                              Time                                */
 #clock
 {
     text-align:center;
     border-top:solid 1px;
     border-bottom:solid 1px;
+}
+
+/*                          CountdownTimer                           */
+#display
+{
+    border:solid 1px;
+    font-size:32px;
+    display:flex;
+    justify-content:space-around;
+    margin:10px;
+    padding:10px;
+}
+.time-block
+{
+    border:solid 3px;
+    border-radius:10px;
+}
+.time-unit
+{
+    font-size:48px;
+    color:rgb(200,0,0);
+    width:148px;
+    height:148px;
+    background-color:Highlight;
+}
+.time-marker
+{
+    border:solid 1px;
+    background-color:rgb(200,0,0);
+    color:aliceblue;
+}
+.time-unit, .time-marker
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
