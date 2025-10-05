@@ -6,6 +6,9 @@ Install:
 https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 
 TODO:
+1. В проект Blazor добавить компоненты Factorial и Fibonacci;
+
+DONE:
 Добить Countdown timer;
 
 DONE:
