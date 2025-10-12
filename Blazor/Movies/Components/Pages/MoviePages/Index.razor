@@ -1,0 +1,67 @@
+﻿@page "/movies"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using Movies.Models
+@using Movies.Data
+@using System.ComponentModel.DataAnnotations;
+@using System.ComponentModel.DataAnnotations.Schema;
+@implements IAsyncDisposable
+@inject IDbContextFactory<Movies.Data.MoviesContext> DbFactory
+
+@rendermode InteractiveServer
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<div>
+    <form action="/movies" data-enhance data-permanent>
+        <input type="search" name="titleFilter" />
+        <input type="submit" value="search"/>
+    </form>
+</div>
+<div>
+    <label for="items-per-page">Items per page</label>
+    @* <input type="number" @bind="pagination.ItemsPerPage"/> *@
+    <select name="items-per-page" @bind="pagination.ItemsPerPage">
+        <option>3</option>
+        <option>5</option>
+        <option>8</option>
+    </select>
+</div>
+
+<p>
+    <a href="movies/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="FilteredMovies" Pagination="pagination">
+    <PropertyColumn Property="movie => movie.Title" Sortable="true" />
+    <PropertyColumn Property="movie => movie.ReleaseDate" Sortable="true" />
+    <PropertyColumn Property="movie => movie.Genre" />
+    <PropertyColumn Property="movie => movie.Price" Sortable="true" />
+
+    <TemplateColumn Context="movie">
+        <a href="@($"movies/edit?id={movie.Id}")">Edit</a> |
+        <a href="@($"movies/details?id={movie.Id}")">Details</a> |
+        <a href="@($"movies/delete?id={movie.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+<Paginator State="pagination" />
+
+@code {
+    private MoviesContext context = default!;
+
+    [SupplyParameterFromQuery]
+    string TitleFilter { get; set; } = "";
+    IQueryable<Movie> FilteredMovies =>
+        context.Movie.Where(m => m.Title.Contains(TitleFilter ?? string.Empty));
+
+    PaginationState pagination = new PaginationState { ItemsPerPage = 3 };
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

@@ -1,0 +1,38 @@
+﻿@page "/humans"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using WhatIsMigration.Models
+@using WhatIsMigration.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<WhatIsMigration.Data.WhatIsMigrationContext> DbFactory
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="humans/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="context.Human">
+    <PropertyColumn Property="human => human.LastName" />
+    <PropertyColumn Property="human => human.FirstName" />
+    <PropertyColumn Property="human => human.BirthDate" />
+
+    <TemplateColumn Context="human">
+        <a href="@($"humans/edit?id={human.Id}")">Edit</a> |
+        <a href="@($"humans/details?id={human.Id}")">Details</a> |
+        <a href="@($"humans/delete?id={human.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private WhatIsMigrationContext context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

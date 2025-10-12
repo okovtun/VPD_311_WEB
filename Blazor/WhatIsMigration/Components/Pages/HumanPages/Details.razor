@@ -1,0 +1,50 @@
+﻿@page "/humans/details"
+@using Microsoft.EntityFrameworkCore
+@using WhatIsMigration.Models
+@inject IDbContextFactory<WhatIsMigration.Data.WhatIsMigrationContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h2>Human</h2>
+    <hr />
+    @if (human is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">LastName</dt>
+            <dd class="col-sm-10">@human.LastName</dd>
+            <dt class="col-sm-2">FirstName</dt>
+            <dd class="col-sm-10">@human.FirstName</dd>
+            <dt class="col-sm-2">BirthDate</dt>
+            <dd class="col-sm-10">@human.BirthDate</dd>
+        </dl>
+        <div>
+            <a href="@($"/humans/edit?id={human.Id}")">Edit</a> |
+            <a href="@($"/humans")">Back to List</a>
+        </div>
+    }
+</div>
+
+@code {
+    private Human? human;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        human = await context.Human.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (human is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

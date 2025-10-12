@@ -2,6 +2,9 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPJ5ms9kxlHNmKHo7H4eqvi
 https://okovtun.github.io/VPD_311_WEB/
 
+Hosting:
+https://freeasphosting.net/
+
 Install:
 https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 

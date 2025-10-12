@@ -1,0 +1,54 @@
+﻿@page "/humans/create"
+@using Microsoft.EntityFrameworkCore
+@using WhatIsMigration.Models
+@inject IDbContextFactory<WhatIsMigration.Data.WhatIsMigrationContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create</PageTitle>
+
+<h1>Create</h1>
+
+<h2>Human</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Human" OnValidSubmit="AddHuman" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">LastName:</label> 
+                <InputText id="lastname" @bind-Value="Human.LastName" class="form-control" /> 
+                <ValidationMessage For="() => Human.LastName" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="firstname" class="form-label">FirstName:</label> 
+                <InputText id="firstname" @bind-Value="Human.FirstName" class="form-control" /> 
+                <ValidationMessage For="() => Human.FirstName" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="birthdate" class="form-label">BirthDate:</label> 
+                <InputDate id="birthdate" @bind-Value="Human.BirthDate" class="form-control" /> 
+                <ValidationMessage For="() => Human.BirthDate" class="text-danger" /> 
+            </div>        
+            <button type="submit" class="btn btn-primary">Create</button>
+        </EditForm>
+    </div>
+</div>
+
+<div>
+    <a href="/humans">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private Human Human { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddHuman()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Human.Add(Human);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/humans");
+    }
+}
