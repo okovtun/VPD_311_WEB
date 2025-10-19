@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies", "Movies\Movies.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatIsMigration", "WhatIsMigration\WhatIsMigration.csproj", "{B161E8A6-E71C-4130-A801-1580B3AC2A79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy", "Academy\Academy.csproj", "{93A96407-77F8-4152-BC77-6127A0F25A14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B161E8A6-E71C-4130-A801-1580B3AC2A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B161E8A6-E71C-4130-A801-1580B3AC2A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B161E8A6-E71C-4130-A801-1580B3AC2A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93A96407-77F8-4152-BC77-6127A0F25A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A96407-77F8-4152-BC77-6127A0F25A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93A96407-77F8-4152-BC77-6127A0F25A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93A96407-77F8-4152-BC77-6127A0F25A14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

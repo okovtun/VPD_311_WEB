@@ -9,6 +9,10 @@ Install:
 https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 
 TODO:
+1. В проекте Academy отобразить информацию о Студентах, Группах, Направлениях обучения и преподавателях;
+2. На кадлой странице должен быть реализован поиск, сортировка и переключени по странцам (Pagination);
+
+DONE:
 1. В проект Blazor добавить компоненты Factorial и Fibonacci;
 2. В проект Blazor добавить компоненты Dec2Bin, Dec2Hex, Bin2Dec, Hex2Dec;
 3. *Залить приложение на хостинг;
