@@ -2,13 +2,37 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPJ5ms9kxlHNmKHo7H4eqvi
 https://okovtun.github.io/VPD_311_WEB/
 
+UNIX:
+1. Почитать про текстовый редактор VI;
+
 Hosting:
 https://freeasphosting.net/
 
 Install:
 https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 
+Ubuntu:
+https://releases.ubuntu.com/22.04/ubuntu-22.04.5-live-server-amd64.iso
+
 TODO:
+1. Скачать и установить FreeBSD:
+	https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-dvd1.iso
+2. Собрать компьютер стоимостью примерно $1000 и сравнить VPS-сервер с физическим по рентабельности;
+3. Найти географичесое расположение Data-центров Yandex-Cloud;
+4. Провести сравнительный анализ стоимости услуг у разных Cloud Service Provider-ов:Azure, Google, Amazon....
+
+TODO:
+1. В Solution 'MVC' создать проект 'Academy' и в нем отобразить, прикрутить к нему Базу VPD_311_Import:
+	Студентов, Группы, Направления, Дисциплины и Преподов;
+2. На каждой странице должна быть сротировка и Pagination;
+3. Для выбранного преподавателя на страницах 'Details' и 'Edit' должны отображаться дисциплины которые он может вести;
+4. На странице 'Edit' должна быть возможность добавлять и удалять дисциплины для выбранного препода;
+5. На страницах преподавателей и студентов должно отобажаться фото выбранного преподавателя либо студента;
+
+DONE:
+https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-9.0
+
+DONE:
 1. В проекте Academy отобразить информацию о Студентах, Группах, Направлениях обучения и преподавателях;
 2. На кадлой странице должен быть реализован поиск, сортировка и переключени по странцам (Pagination);
 
